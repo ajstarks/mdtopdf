@@ -272,6 +272,12 @@ func NewPdfRendererWithDefaultStyler(orient, papersz, pdfFile, tracerFile string
 	return r
 }
 
+// Inline takes markdown content, parses and generates PDF inline
+func (r *PdfRenderer) Inline(content []byte) error {
+	_ = bf.Run(content, bf.WithRenderer(r))
+	return nil
+}
+
 // Process takes the markdown content, parses it to generate the PDF
 func (r *PdfRenderer) Process(content []byte) error {
 
