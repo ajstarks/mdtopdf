@@ -1,2 +1,1 @@
-# mdtopdf
-fork from mdtopdf (github.com/mandolyte/mdtopdf)
+# moved to github.com/ajstarks/utils/cmd
